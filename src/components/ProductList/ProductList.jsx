@@ -8,7 +8,8 @@ class ProductList extends Component {
         return (
             <section className="product-list">
                 <div className="container">
-                    <Title>{this.props.title}</Title>
+                {this.props.title && <Title>{this.props.title}</Title>}
+                    
 
                     <article className="product-list-items">
                         <Product/>

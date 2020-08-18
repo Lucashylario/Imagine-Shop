@@ -4,7 +4,6 @@ import './style.scss';
 import Button from '../../components/Button';
 import Title from '../../components/Title';
 import ProductList from '../../components/ProductList';
-import Footer from '../../components/Footer';
 
 const ProductDetail = props => {
     return (
@@ -54,8 +53,6 @@ const ProductDetail = props => {
 
                     </div>
                 </section>
-                
-                <Footer />
         </Fragment>
     )
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import logo from '../../assets/images/logo.png';
+import { Link } from 'react-router-dom';
 import './style.scss';
 
 const Header = () => {
@@ -8,14 +9,16 @@ const Header = () => {
         <header className="header">
             <div className="container">
                 <div className="header-logo">
-                    <img src={logo} alt="Logo"/>
+                    <Link to="/">
+                        <img src={logo} alt="Logo"/>
+                    </Link>
                 </div>
 
                 <nav className="header-links">
                     <ul className="header-menu">
-                        <li><a href=" # "> Home </a></li>
-                        <li><a href=" # "> Sobre </a></li>
-                        <li><a href=" # "> Produtos </a></li>
+                        <li><Link to="/"> Home </Link></li>
+                        <li><Link to="/about/"> Sobre </Link></li>
+                        <li><Link to="/products/"> Produtos </Link></li>
                     </ul>
 
                     <div className="header-cart">

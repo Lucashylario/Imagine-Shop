@@ -2,11 +2,16 @@
 
 .product-card {
     width: 260px;
-    padding: 12px;
     border-radius: 4px;
     box-shadow: 0 2px 5px rgba(0,0,0,.2);
-    cursor: pointer;
     transition: all .3s ease;
+    a {
+        display: block;
+        padding: 12px;
+        cursor: pointer;
+        color: $dark;
+        text-decoration: none;
+    }
     img {
         width: 100%;
         height: auto;
