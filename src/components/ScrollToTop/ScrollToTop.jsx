@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import { withRouter } from "react-router-dom";
-
+//ScrollToTop serve para que quando for abrir uma nova pagina ela suba no inicio não deixando ela abrir na metade da pag.
 class ScrollToTop extends Component {
     componentDidUpdate(prevProps) {
       if (this.props.location.pathname !== prevProps.location.pathname) {

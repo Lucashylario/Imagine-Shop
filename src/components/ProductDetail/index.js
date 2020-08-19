@@ -1,4 +1,3 @@
 import ProductDetail from './ProductDetail';
-import ProductList from '../ProductList';
 
 export default ProductDetail;

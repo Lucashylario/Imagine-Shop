@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component } from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
@@ -20,7 +20,7 @@ class App extends Component {
         <ScrollToTop>
           <Header />
           <Route path="/" exact component={Home} />
-          <Route path="/product/" component={ProductPage} />
+          <Route path="/product/:id" component={ProductPage} />
           <Route path="/about/" exact component={About} />
           <Route path="/products/" exact component={Products} />
           <Footer />

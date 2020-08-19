@@ -4,12 +4,35 @@ import imgBanner from '../assets/images/banner.jpg';
 import ProductList from '../components/ProductList';
 
 class Home extends Component {
+    constructor() {
+        super();
+
+        this.state = {
+            featured: [],
+            sale: [] // [] array
+        }
+    }
+
+    componentDidMount() { 
+        fetch("http://localhost:3000/products")
+            .then(result => result.json())
+            .then(result => {
+                let featureProducts = result.filter(product => product.category === "featured");
+                let saleProducts = result.filter(product => product.category === "sale");
+
+                this.setState({
+                    featured: featureProducts,
+                    sale: saleProducts
+                })
+        })
+    }
+
     render() {
         return (
             <Fragment>
                 <Banner img={imgBanner} alt="Banner Promocional" />
-                <ProductList title="Destaques"/>
-                <ProductList title="Melhores Ofertas"/>
+                <ProductList title="Destaques" products={this.state.featured} />
+                <ProductList title="Melhores Ofertas" products={this.state.sale} />
             </Fragment>
         )
     }

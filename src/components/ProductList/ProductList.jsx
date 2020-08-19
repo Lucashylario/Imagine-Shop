@@ -8,14 +8,13 @@ class ProductList extends Component {
         return (
             <section className="product-list">
                 <div className="container">
-                {this.props.title && <Title>{this.props.title}</Title>}
+                    {this.props.title && <Title>{this.props.title}</Title>}
                     
 
                     <article className="product-list-items">
-                        <Product/>
-                        <Product/>
-                        <Product/>
-                        <Product/>
+                        {this.props.products.map(product => (
+                            <Product item={product} key={product.id} />
+                        ))}
                     </article>
                 </div>
             </section>

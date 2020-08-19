@@ -12,9 +12,9 @@ const Footer = () => {
                 </div>
             <div className="footer-social">
                 <ul>
-                    <li><a href=" #"><FontAwesomeIcon icon={['fab', 'facebook']} /></a></li>
-                    <li><a href=" #"><FontAwesomeIcon icon={['fab', 'instagram']} /></a></li>
-                    <li><a href=" #"><FontAwesomeIcon icon={['fab', 'youtube']} /></a></li>
+                    <li><a href="http://facebook.com"><FontAwesomeIcon icon={['fab', 'facebook']} /></a></li>
+                    <li><a href="http://instagram.com"><FontAwesomeIcon icon={['fab', 'instagram']} /></a></li>
+                    <li><a href="http://youtube.com"><FontAwesomeIcon icon={['fab', 'youtube']} /></a></li>
                     
                 </ul>
             </div>
