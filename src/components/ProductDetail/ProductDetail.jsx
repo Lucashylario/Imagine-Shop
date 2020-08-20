@@ -3,6 +3,7 @@ import './style.scss';
 import Button from '../../components/Button';
 import Title from '../../components/Title';
 import ProductList from '../../components/ProductList';
+import Currency from 'react-currency-formatter';
 
 const ProductDetail = props => {
     return (
@@ -16,8 +17,8 @@ const ProductDetail = props => {
 
                             <div className="product-detail-info">
                                 <h1 className="product-detail-title">{props.productItem.title}</h1>
-                                <p className="product-detail-price">{props.productItem.price}</p>
-                                <small className="product-detail-payment"> {props.productItem.installments}x R$ 299,99 sem juros</small>
+                                <p className="product-detail-price"><Currency quantity={props.productItem.price} currency="BRL" /></p>
+                                <small className="product-detail-payment"> {props.productItem.installments}x de <Currency quantity={props.productItem.price / props.productItem.installments} currency="BRL" /> sem juros</small>
                                 <Button icon="shopping-cart">Adicionar ao carrinho</Button>
                                 <div className="product-detail-overview" dangerouslySetInnerHTML={{__html: props.productItem.overview}}></div>
                             </div>

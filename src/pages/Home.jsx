@@ -3,6 +3,8 @@ import Banner from '../components/Banner';
 import imgBanner from '../assets/images/banner.jpg';
 import ProductList from '../components/ProductList';
 
+//Start api = json-server db.json
+
 class Home extends Component {
     constructor() {
         super();
